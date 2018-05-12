@@ -1,0 +1,13 @@
+.inputID {
+
+}
+
+.button {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    background-color: darkgrey;
+}
