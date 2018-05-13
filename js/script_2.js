@@ -1,14 +1,7 @@
-function requestJSON(url, callback) {
-    $.ajax({
-      url: url,
-      complete: function(xhr) {
-        callback.call(null, xhr.responseJSON);
-      }
-    });
-  }
 $(function(){
     $('#subButton').on('click', function(e){
         event.preventDefault();
+        $('#result').html('<div class="loader"><img src="../images/loading.gif" alt="loading..."></div>');
         var id = $('#id').val();
         var requri   = 'https://api.github.com/users/'+id;
         var repouri  = 'https://api.github.com/users/'+id+'/repos'
@@ -31,10 +24,21 @@ $(function(){
                 
                 if(fullname == undefined) { fullname = username; }
 
-                var output = '<div>Fullname:'+fullname+'</div>''<div>Username:'+username+'</div>';
+                var output = '<div>Fullname:'+fullname+'</div>';
+                output = output + '<div>Username:'+username+'</div>';
 
                 $('#result').html(output);
             }
         });
     });
+    function requestJSON(url, callback) {
+        $.ajax({
+            url: url,
+            complete: function(xhr) {
+                callback.call(null, xhr.responseJSON);
+            }
+        });
+    }
 });
+    
+

@@ -2,18 +2,26 @@
     <head>
         <title>GitHub Profile Analyser</title>
         <link href="..\css\style.css" type="text/css" rel="stylesheet"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="..\js\script_2.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Amaranth|Righteous|Spinnaker" rel="stylesheet"
     </head>
     <body>
-        <h1>GitHub Profile Analyser</h1>
-        <div>
-            <p>Enter the github ID</p>
+        <div class="header">
+            <ul>
+                <li><img src="..\images\github_logo.png" class="logo"></li>
+                <li class="heading">GitHub Profile Analyser</li>
+            </ul>
+        </div>
+        <div class="mainform">
+        </br>
+            <p class="inst">Enter your GitHub ID</p>
             <form name="idValue">
-                <input id="id" type="text" name="display" size="15" class="inputID"></input>
+                <input id="id" type="text" name="display" size="15" class="inputID" placeholder="Username"></input>
+                </br>
                 <a href='#' id="subButton" class="button">Enter</a>
             </form>
         </div>
         <p id="result"></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="..\js\script_2.js"></script>    
     </body>
 </html>

@@ -1,13 +1,75 @@
-.inputID {
+body {
+    margin:0;
+    background-color: darkgray;
+}
+.header {
+    background-color: black;
+    height: 110px;
+}
 
+li {
+    float: left;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.heading {
+    display: inline-block;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 60px;
+    color: azure;
+    background-color: black;
+    width:75%;
+    height: 100px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.mainform {
+    text-align: center;
+    width:400px;
+    height:200px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    background-color: darkslategray;
+}
+
+.inst {
+    font-family: 'Amaranth', sans-serif;
+    font-size: 35px;
+    margin: 20px;
+}
+
+.inputID {
+    margin-top: 15px;
+    width: 250px;
+    height: 40px;
 }
 
 .button {
+    font-family: 'Spinnaker', sans-serif;
     color: black;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin-top: 10px;
     width: 60px;
     height: 20px;
     background-color: darkgrey;
+}
+
+.loader {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 100px;
+    height: 100px;
+}
+
+#result {
+    text-align: center; 
 }
