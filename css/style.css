@@ -30,6 +30,7 @@ li {
 
 .mainform {
     text-align: center;
+    border-radius: 8px;
     width:400px;
     height:200px;
     margin-left: 30%;
@@ -49,6 +50,9 @@ li {
     margin-top: 15px;
     width: 250px;
     height: 40px;
+    border-radius: 4px;
+    padding-left: 5px;
+    outline: none;
 }
 
 .button {
@@ -61,6 +65,13 @@ li {
     width: 60px;
     height: 20px;
     background-color: darkgrey;
+    border-radius: 4px;
+}
+
+.button:hover {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
 }
 
 .loader {
@@ -72,4 +83,25 @@ li {
 
 #result {
     text-align: center; 
+}
+
+.avatar {
+    text-align: left;
+    width: 100px;
+    height: 100px;
+}
+
+.username {
+    text-align: left;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
+    margin-left: 30%;
+    font-size: 30px;
+}
+
+.name {
+    text-align: left;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 20px;   
+    margin-left: 30%;
 }

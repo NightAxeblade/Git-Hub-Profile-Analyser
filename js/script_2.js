@@ -24,8 +24,10 @@ $(function(){
                 
                 if(fullname == undefined) { fullname = username; }
 
-                var output = '<div>Fullname:'+fullname+'</div>';
-                output = output + '<div>Username:'+username+'</div>';
+                var output = '<img src ="' + aviurl + '" class="avatar">';
+                output = output + '<div class="username">'+username+'</div>';
+                output = output + '<div class="name">'+fullname+'</div>';
+
 
                 $('#result').html(output);
             }
