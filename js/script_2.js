@@ -24,12 +24,13 @@ $(function(){
                 
                 if(fullname == undefined) { fullname = username; }
 
-                var output = '<img src ="' + aviurl + '" class="avatar">';
+                var output = '<div class="mainresult"> <img src ="' + aviurl + '" class="avatar">';
                 output = output + '<div class="username">'+username+'</div>';
-                output = output + '<div class="name">'+fullname+'</div>';
+                output = output + '<div class="name">'+fullname+'</div> </div>';
 
 
                 $('#result').html(output);
+                window.scrollTo(0,500);
             }
         });
     });
