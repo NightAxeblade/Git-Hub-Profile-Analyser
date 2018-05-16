@@ -10,6 +10,7 @@ $(function(){
 
             if(json.message == "Not Found" || username == '') {
                 $('#result').html("<h2>No User Info Found</h2>");
+                //window.scrollTo(0,1000);
             }
             
             else {
@@ -21,12 +22,21 @@ $(function(){
                 var followersnum = json.followers;
                 var followingnum = json.following;
                 var reposnum     = json.public_repos;
+                var company = json.company;
+                var blog = json.blog;
                 
                 if(fullname == undefined) { fullname = username; }
+                if(location == null) {location = 'undisclosed location';}
+                if(company == null) {company = 'Not employed as of now';}
+                if(blog == null) {blog = 'Not writing as of now';}
 
-                var output = '<div class="mainresult"> <img src ="' + aviurl + '" class="avatar">';
-                output = output + '<div class="username">'+username+'</div>';
-                output = output + '<div class="name">'+fullname+'</div> </div>';
+                var output = '<div class="mainresult" class="clearfix">';
+                output = output + '<div class="avatardiv"> <img src ="' + aviurl + '" class="avatar"> </div>';
+                output = output + '</br></br><div class="rightofav"></br><b> Followers:</b> ' + followersnum + '</br><b> Following:</b> ' + followingnum + '</br><b>Profile:</b> <a class="link" href=' + profileurl + '>' + profileurl + '</a></div>';
+                output = output + '</br></br></br></br><div class="username"> <a class="link" href='+profileurl+'>'+username+'</a></div>';
+                output = output + '<div class="name">'+fullname+'</div>';
+                output = output + '</br></br><div class="info"> <b>Based in</b>: ' + location + '<hr size=1 color="white"><b>Part of</b>: ' + company + '<hr size=1 color="white"><b>Writes at</b>: <a class="infolink" href=' + blog + '>' + blog + '</a></div></br></br></div>';
+                
 
 
                 $('#result').html(output);

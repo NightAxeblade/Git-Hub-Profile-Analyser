@@ -88,9 +88,9 @@ li {
 .mainresult {
     text-align: center;
     border-radius: 8px;
-    width:600px;
-    height:500px;
-    margin-left: 28%;
+    width:700px;
+    /*height:500px;*/
+    margin-left: 25%;
     margin-right: 30%;
     margin-top: 75px;
     margin-bottom: 50px;
@@ -104,8 +104,23 @@ li {
 
 }
 
+.avatardiv {
+    float: left;
+    margin-left: 5%;
+}
+
+.rightofav {
+    text-align: left;
+    font-family: 'Catamaran', sans-serif;
+    margin-left: 275px;;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 0px;
+}
+
 .avatar {
-    margin-right: 280px;
+    /*margin-right: 280px;*/
+    text-align: left;
     width: 200px;
     height: 200px;
     border-radius: 8px;
@@ -119,16 +134,50 @@ li {
     text-align: left;
     font-family: 'Catamaran', sans-serif;
     font-weight: bold;
-    margin-left: 10%;
+    margin-left: 5%;
     font-size: 50px;
     color: black;
     margin-bottom: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    color: darkblue;
 }
 
 .name {
     text-align: left;
     font-family: 'Catamaran', sans-serif;
     font-size: 30px;   
-    margin-left: 10%;
+    margin-left: 5%;
     color: black;
+}
+
+.info {
+    width: 600px;
+    background-color: black;
+    border-style: solid;
+    border-color: beige;
+    border-width: 2px;
+    text-align: left;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 20px;   
+    margin-left: 5%;
+    color: beige;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+}
+
+.infolink {
+    text-decoration: none;
+    color: beige; 
+}
+
+.infolink:hover {
+    color: darkgoldenrod;
 }
