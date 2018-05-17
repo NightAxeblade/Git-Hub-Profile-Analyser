@@ -36,7 +36,12 @@ $(function(){
                 output = output + '</br></br></br></br><div class="username"> <a class="link" href='+profileurl+'>'+username+'</a></div>';
                 output = output + '<div class="name">'+fullname+'</div>';
                 output = output + '</br></br><div class="info"> <b>Based in</b>: ' + location + '<hr size=1 color="white"><b>Part of</b>: ' + company + '<hr size=1 color="white"><b>Writes at</b>: <a class="infolink" href=' + blog + '>' + blog + '</a></div></br></br>';
-                
+                output = output + '<div id="repores"></div> </div>';
+
+
+                $('#result').html(output);
+                window.scrollTo(0,500);
+
                 var repos;
                 $.getJSON(repouri, function(json) {
                     repos = json;
@@ -44,19 +49,16 @@ $(function(){
                 });
 
                 function repodata() {
-                    if (repo.length==0) { output = output + '<p>No repos!</p></div>';}
+                    if (repo.length==0) { $('#repores').append('<p>No repos!</p>');}
 
                     else {
-                        output = output + '<div class="repo">Repo List';
-                        $.each(repos, function(index,repos) {
-                            output = output + '<div class="repobox"><a href="' + repos.html_url + '">' + repos.name + '</a>';
-                            //output = output + '<div class="repodesc">' + repos.description + '</div></div>';
+                        $.each(repos, function(index) {
+                            $('#repores').append('<div class="repobox"><a href="' + repos[index].html_url + '">' + repos[index].name + '</a></div>');
+                            //output = output + '<div class="repodesc">' + repos[index].description + '</div></div>';
                         });
-                        output = output + '</div></div>';
                     }
-                    $('#result').html(output);
-                    window.scrollTo(0,500);
-                }  
+
+                }
             }
         });
     });
@@ -69,5 +71,3 @@ $(function(){
         });
     }
 });
-    
-
